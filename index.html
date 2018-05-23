@@ -17,8 +17,31 @@
 	
 </head>
 
-<body style="height: 3000px;">
+<body>
 	
+<!-- Top Arrow -->
+	
+<a href="javascript:" id="return-to-top"><i class="fas fa-chevron-up"></i></a>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+	
+<!-- Top Arrow -->
+	
+<!------ LOADING SCREEN ------>
+
+<div class="row loading-page">
+  <div class="col-lg-12" align="center"> 
+  <img id="logo" src="img/logo/SlickFin_design_large.png" width="300" alt="logo"/>
+ <div class="col-lg-12" align="center">
+  <div class="counter">
+   <p>Welcome to SlickFin</p>
+    <h1>0%</h1>
+      <hr/>
+    </div>
+  </div>
+ </div>
+</div>  
+	
+<!------ LOADING SCREEN ------>
 	
 <!------ HEADER ------>	
 	
@@ -28,7 +51,7 @@
  <div class="navigation_bar fadeDown">
     <div class="menu_bar">	
       <a class="link cover" href="#titles_aboutme">About</a>
-      <a class="link cover" href="#">Work</a>
+      <a class="link cover" href="#titles_work">Work</a>
       <a class="link cover" href="#">Contact</a>
     </div>
  </div>
@@ -48,7 +71,7 @@
 		<div class="menu_bar_scroll">
 		  <img class="link_logo" src="img/logo/SlickFin_design_scroll.png">	
           <a class="link_scroll cover" href="#titles_aboutme">About</a>
-          <a class="link_scroll cover" href="#">Work</a>
+          <a class="link_scroll cover" href="#titles_work">Work</a>
           <a class="link_scroll cover" href="#">Contact</a>
         </div> 
     </div>
@@ -74,7 +97,7 @@
 	
   <div id="background_about">	
 	<div class="container" style="padding: 10px; z-index: 5;">
-		<div class="row fade" style="background-color: rgba(255, 255, 255, 0.64); border-radius: 100px;">
+		<div class="row fadeCenter" style="background-color: rgba(255, 255, 255, 0.64); border-radius: 100px;">
 			<div class="col-12" align="center">
 				<h1 id="titles_aboutme" name="about" class="shimmer shimmer_fade" style="margin: 30px 0px;">About Me</h1>
 			</div>
@@ -104,8 +127,37 @@
  </div>	
 	
 	
-<!------ ABOUT ------>	
+<!------ ABOUT ------>
 	
+<!------ WORK ------>
+  <div id="background_work">
+   <video autoplay loop id="video_background" muted plays-inline>
+  <source src="vid/work_video.mp4" type="video/mp4">
+   </video>
+	<div class="container_edit">
+		<div class="row" align="center" style="padding: 10px; margin-top: 20px;">
+			<div class="col-lg-12 fadeCenter work_title">
+				<h1 id="titles_work" name="work" class="shimmer shimmer_fade" style="background-color: white;">Work</h1>
+			</div>
+			<div class="col-lg-4_edit col-sm-12 work_box fadeLeft">
+			  <img class="work_img1" src="img/work_icons/web_dev_icon.png" width="165px">
+				<h2 id="work_titles">Web Development</h2>
+				  <p class="text text_work" style="padding: 10px;">Specialising in front-end development and trained in back-end development. We can build you exquisite responsive websites that engage your target audience and convey the message you need to send in an instance. Priding ourselves in creating the functionality you desire in your own website. Providing you with your own bespoke site that you can be truly happy with, and sit back, relax and watch how this new site can increase your business.</p>
+			</div>
+			<div class="col-lg-4_edit col-sm-12 work_box fadeCenter">
+			  <img class="work_img2" src="img/work_icons/graphic_icon.png" width="165px">
+				<h2 id="work_titles">Graphic Design</h2>
+				  <p class="text text_work" style="padding: 10px;">From logo designs, brand designs, editorial designs to completely giving your business brand a totally new renovation. We deal in specific customary designs both large and small, or just revamping an old design you want to keep but add a little spice to. The approach we will take with this is to fully understand your business brand, what you're trying to represent yourself as in the market. Then execute something that you're truly excited about.</p>
+			</div>
+			<div class="col-lg-4_edit col-sm-12 work_box fadeRight">
+			  <img class="work_img3" src="img/work_icons/web_design_icon.png" width="165px">
+				<h2 id="work_titles">Web Design</h2>
+				  <p class="text text_work" style="padding: 10px;">Encompassing the aspects of Web Development & Graphic Design, we have the ability to create beautiful webpage layouts, produce content, user interface and grab the visual appeal for your unique design. Taking into consideration the traffic flow we want your site to generate, we will give an easy navigation for the user, make them want to stay and interact with the site. With our professional web design strategy, we will aim to make your business credible online. </p>
+			</div>
+		</div>
+	</div>
+  </div>
+<!------ WORK ------>	
 	
 	
 	
@@ -115,6 +167,7 @@
 	<script src="js/effect_now.js"></script>
 	<script src="js/particle.js"></script> <!-- PARTICLE JS -->
 	<script src="js/playground.js"></script> <!-- PARTICLE JS -->
+	<script src="js/load.js"></script>
 	<script src="js/index.js"></script>
 	
 	
