@@ -15,6 +15,23 @@ $(window).scroll(function () { //Using the scroll global variable
 /* On Load: Trigger Scroll Once*/
 $(window).scroll();
 
+var $fadeCenter =  $(".fadeCenter"); //Calling the class in HTML
+
+$(window).scroll(function () { //Using the scroll global variable
+    $fadeCenter.each(function () {
+      
+        fadeMiddle = $(this).offset().top + (0.4 *$(this).height());
+        windowBottom = $(window).scrollTop() + $(window).height();
+        
+        if (fadeMiddle < windowBottom) {
+          $(this).addClass("FadeCenter");
+        }
+    });
+});
+
+/* On Load: Trigger Scroll Once*/
+$(window).scroll();
+
 //Fade in web browser renders screen - first js script function
 
 var $fadeDown =  $(".fadeDown"); //Calling the class in HTML
@@ -72,7 +89,7 @@ $(window).scroll();
 
 
 
-var $fade_shimmer =  $(".shimmer_fade"); //Calling the class in HTML
+var $fade_shimmer =  $(".shimmer_fade, .work_fade"); //Calling the class in HTML
 
 $(window).scroll(function () { //Using the scroll global variable
     $fade_shimmer.each(function () {
@@ -81,7 +98,7 @@ $(window).scroll(function () { //Using the scroll global variable
         windowBottom = $(window).scrollTop() + $(window).height();
         
         if (fadeMiddle < windowBottom) {
-          $(this).addClass("shimmer");
+          $(this).addClass("shimmer, work_shimmer");
         }
     });
 });
@@ -135,3 +152,41 @@ $(window).scroll(function(e){
         $('#nav_bar:visible').slideUp();
     }
 });
+
+// Top Arrow JS
+
+if ($('#return-to-top').length){
+  
+  var scrollTrigger = 200, 
+  returnToTop = function () {
+    var scrollTop = $(window).scrollTop();
+    if (scrollTop > scrollTrigger) {
+      
+      $('#return-to-top').addClass('show');
+       
+    } else {
+      
+      $('#return-to-top').removeClass('show');
+      
+    }
+    
+  };
+
+     returnToTop();
+       $(window).on('scroll', function () {
+         returnToTop();             
+                  
+    });
+  
+   $('#return-to-top').on('click', function(e){
+     e.preventDefault();
+     $('html,body').animate({
+          scrollTop: 0
+       
+     }, 700);
+     
+   });
+
+}
+
+// Top Arrow JS
