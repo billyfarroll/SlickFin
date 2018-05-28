@@ -2,7 +2,8 @@ body {
 	
 	font-family: 'Quicksand', sans-serif;
 	font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased; 
+	-webkit-font-smoothing: antialiased;
+	background-color: white;
 	
 }
 
@@ -107,6 +108,15 @@ body {
 	
 }
 
+#footer {
+	
+	background-color: rgba(34, 24, 58, 1);
+	border-top: 2px solid black;
+	padding: 20px 0px;
+	
+}
+
+
 /*********** VIDEO BACKGROUND ***********/
 
 #background_work {
@@ -132,6 +142,8 @@ body {
 }
 
 /*********** VIDEO BACKGROUND ***********/
+
+
 
 /* BACKGROUND IMAGES */
 
@@ -1040,7 +1052,7 @@ body {
 	
 }
 
-.work_img1 {
+.work_img1  {
 	
 	-webkit-animation: float1 5s ease-in-out forwards;
     -webkit-animation-iteration-count: infinite;
@@ -1295,6 +1307,73 @@ form input[type=submit]:focus {
 
 /***** Contact Form *****/
 
+/**** Footer Content ****/
+
+.copyright_text {
+	
+	color: white;
+	margin-bottom: 0px;
+	
+}
+
+.footer_icon {
+	
+  background-color: #ffffff38;
+  border: 1px solid #7a6e96;
+  padding: 9px 4px;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+  
+}
+
+.footer_icon:hover {
+	
+  background-color: #ffffffbd;
+  border: 1px solid white;
+
+   
+	
+}
+
+.logo_footer {
+	
+	animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+	border-radius: 150px;
+	padding: 5px;
+	
+}
+
+@keyframes floating {
+    from  
+       { box-shadow: 0 5px 15px 0px rgba(123, 148, 239, 0.6);
+         transform: translate(0,  0px); }
+    65%  
+       {  box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+          transform: translate(0, 15px); }
+  
+    to   
+       { box-shadow: 0 5px 15px 0px rgba(123, 148, 239, 0.6);
+         transform: translate(0, -0px); }    
+}
+
+.footer_space {
+	
+	margin: 10px 0px;
+	
+	
+}
+
+
+	
+
+
+/**** Footer Content ****/
 
 /******************** Media Queries *************************/
 
@@ -1513,6 +1592,12 @@ form .field:hover label {
 		
 	}
 	
+	.phone_footer {
+		
+		display: none;
+		
+	}
+	
 	
 }
 
@@ -1604,7 +1689,10 @@ form .field:hover label {
 	
 	/*Text*/
 	
-	
-	
+	.phone_footer {
+		
+		display: none;
+		
+	}
 	
 }
