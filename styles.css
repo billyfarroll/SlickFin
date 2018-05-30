@@ -116,6 +116,13 @@ body {
 	
 }
 
+#thanks_background {
+	
+	background-color: rgba(36, 19, 76, 1);
+	
+	
+}
+
 
 /*********** VIDEO BACKGROUND ***********/
 
@@ -246,6 +253,44 @@ body {
     }
 }
 /* FadeIn called by JS index.js */
+
+.fadeDown1 {
+	
+	opacity: 0;
+	
+}
+
+/* FadeIn called by JS index.js */
+.FadeDown1 {
+    -webkit-animation: slideDown1 0.8s ease 0.3s forwards;
+    animation: slideDown1 0.8s ease 0.3s forwards;
+
+}
+
+@-webkit-keyframes slideDown1 {
+    0%{
+        -webkit-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideDown1 {
+    0% {
+        -webkit-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* FadeIn called by JS index.js */
+
 
 
 .fadeCenter {
@@ -490,6 +535,7 @@ body {
 }
 
 
+
 .link:hover {
   border: 1px solid rgba(7, 134, 252,0);  /*When hover hide the hover to alpha 0*/
   color: white;
@@ -655,7 +701,7 @@ body {
 		
 	}
 
-#work_titles {
+.work_titles {
 	
 	font-size: 1.3em;
 	font-weight: bold;
@@ -1369,11 +1415,54 @@ form input[type=submit]:focus {
 	
 }
 
-
-	
-
-
 /**** Footer Content ****/
+
+/********* THANKS PAGE **********/
+
+.speech-bubble {
+	position: relative;
+	background: rgba(71, 60, 109, 1);
+	border-radius: 0.4em;
+	height: 10em;
+	padding: 15px 2px;
+	margin-top: 2em;
+	margin-right: 10em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 35%;
+	width: 0;
+	height: 0;
+	border: 45px solid transparent;
+	border-right-color: rgba(71, 60, 109, 1);
+	border-left: 0;
+	border-top: 0;
+	margin-top: -22.5px;
+	margin-left: -45px;
+}
+
+
+
+#thank_text {
+	
+	font-weight: 500;
+	font-size: 1.25em;
+	color: white;
+	
+}
+
+.thanks_link {
+	
+	margin-right: 9.6em;
+	margin-top: 1em;
+	
+}
+
+/********* THANKS PAGE **********/
+
 
 /******************** Media Queries *************************/
 
@@ -1572,6 +1661,29 @@ form .field:hover label {
 }
 
 
+
+@media only screen and (max-width: 1250px) and (min-width: 991px) {
+	
+	/****** THANKS SECTION ******/
+	
+	.thanks_link {
+		
+		margin-right: 0.5em;
+		
+	}
+	
+	.speech-bubble {
+		
+		margin-right: 1em;
+		
+	}
+	
+	/****** THANKS SECTION ******/
+	
+	
+}
+
+
 @media only screen and (max-width: 990px) {
 	
 	/*Text*/
@@ -1597,6 +1709,38 @@ form .field:hover label {
 		display: none;
 		
 	}
+	
+	/****** THANKS SECTION ******/
+	
+	.thanks_link {
+		
+		margin-right: 0em;
+		margin-left: 2em;
+		
+	}
+	
+	.speech-bubble {
+		
+		margin-right: 0em; 
+		max-width: 25em;
+		width: 100%;
+		
+	}
+	
+	.speech-bubble:after {
+		
+		left: 50%;
+		top: 0%;
+		border: 20px solid transparent;
+		border-bottom-color: rgba(71, 60, 109, 1);
+		border-top: 0;
+		margin-top: -20px;
+		margin-left: -20px;
+		
+	}
+	
+	
+	/****** THANKS SECTION ******/
 	
 	
 }
@@ -1694,5 +1838,33 @@ form .field:hover label {
 		display: none;
 		
 	}
+	
+	/****** THANKS SECTION ******/
+	
+	.thanks_link {
+		
+		margin-right: 0em;
+		margin-left: 0em;
+		margin-top: 25px;
+		margin-bottom: 20px;
+		
+	}
+	
+	.speech-bubble {
+		
+		margin-right: 0em;
+		margin-left: 0em;
+		
+	}
+	
+	#thank_text {
+		
+		font-size: 1em;
+		
+	}
+	
+	
+	
+	/****** THANKS SECTION ******/
 	
 }
