@@ -596,6 +596,7 @@ body {
   position: fixed; 
   top: 0;
   z-index: 10;
+  box-shadow: 0 8px 15px -6px #888888; 
 	
 }
 
@@ -1417,6 +1418,28 @@ form input[type=submit]:focus {
 
 /**** Footer Content ****/
 
+
+/***** Fade effect - on all elements back / forth  *****/
+
+.scr_fade {
+	
+	opacity: 1;
+	transition: all 700ms;
+	
+}
+
+/** Called by the index.js file **/
+
+.scr_fade.hidden {
+	
+	opacity: 0; 
+	
+}
+
+/** Called by the index.js file **/
+
+/***** Fade effect - on all elements back / forth  *****/
+
 /********* THANKS PAGE **********/
 
 .speech-bubble {
@@ -1451,6 +1474,7 @@ form input[type=submit]:focus {
 	font-weight: 500;
 	font-size: 1.25em;
 	color: white;
+	padding: 0px 5px;
 	
 }
 
